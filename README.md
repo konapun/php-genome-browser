@@ -1,7 +1,7 @@
 # PHP Genome Browser
-An implementation of a genome browser in pure PHP which renders as SVG.
+An implementation of a genome browser in pure PHP which renders as SVG (note you can convert the SVG to other format's with ImageMagick).
 
-![browser example](test/glyphs.svg)
+![browser example](test/glyphs.png)
 
 ## Usage
 ```php
@@ -67,6 +67,7 @@ Tracks are used for grouping glyphs into cohesive features.
     * Returns: Arrow glyph
   * `$track->addGeneModel($start, $end)`: Adds a gene model glyph to the track
     * Returns: GeneModel glyph
+  * `$track->disable($bool=true)`: Disables/enables the track to affect its render visibility
 
 ## Glyphs
 All glyphs extend `GenomeBrowser\Glyph\Glyph`. Available glyphs are:
