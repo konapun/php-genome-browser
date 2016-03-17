@@ -2,31 +2,32 @@
 <svg x="0" y="0"  width="900" height="37" class="track">
 <svg x="0" y="0"  width="900" height="32" class="glyph">
 <g class="gene-model" font-family="Verdana" font-size="16" stroke="blue" fill="blue" stroke-width="2">
-<line x1="0" y1="16" x2="900" y2="16"/>
-<rect class="transcript" x="85.929648241206" y="0" width="45.226130653266" height="32"/>
-<rect class="transcript" x="221.608040201" y="0" width="180.90452261307" height="32"/>
+<line x1="0" y1="16" x2="725.1012145749" y2="16"/>
+<rect class="transcript" x="69.230769230769" y="0" width="36.437246963563" height="32"/>
+<rect class="transcript" x="178.54251012146" y="0" width="145.74898785425" height="32"/>
+<text style="" stroke="none" fill="black" class="gene-model-name" x="725.1012145749" y="16">gene-A</text>
 </g>
 </svg>
 </svg>
 <svg x="0" y="42"  width="900" height="30" class="track">
 <svg x="0" y="0"  width="900" height="10" class="glyph">
 <g class="arrow-glyph" stroke="black" fill="black" data-direction="right">
-<line stroke-width="10" x1="85.929648241206" y1="5" x2="121.15577889447" y2="5"/>
-<polygon points="121.15577889447,10 131.15577889447,5 121.15577889447,0"/>
+<line stroke-width="10" x1="69.230769230769" y1="5" x2="95.668016194332" y2="5"/>
+<polygon points="95.668016194332,10 105.66801619433,5 95.668016194332,0"/>
 </g>
 </svg>
 <svg x="0" y="15"  width="900" height="10" class="glyph">
 <g class="arrow-glyph" stroke="black" fill="black" data-direction="left">
-<line stroke-width="10" x1="231.608040201" y1="5" x2="402.51256281407" y2="5"/>
-<polygon points="221.608040201,5 231.608040201,10 231.608040201,0"/>
+<line stroke-width="10" x1="188.54251012146" y1="5" x2="324.29149797571" y2="5"/>
+<polygon points="178.54251012146,5 188.54251012146,10 188.54251012146,0"/>
 </g>
 </svg>
 </svg>
 <svg x="0" y="77"  width="900" height="15" class="track">
 <svg x="0" y="0"  width="900" height="10" class="glyph">
-<g class="arrow-glyph" stroke="black" fill="black" data-direction="right">
-<line stroke-width="10" x1="0" y1="5" x2="437.73869346734" y2="5"/>
-<polygon points="437.73869346734,10 447.73869346734,5 437.73869346734,0"/>
+<g class="arrow-glyph" stroke="orange" fill="orange" data-direction="right">
+<line stroke-width="10" x1="0" y1="5" x2="350.72874493927" y2="5"/>
+<polygon points="350.72874493927,10 360.72874493927,5 350.72874493927,0"/>
 </g>
 </svg>
 </svg>
@@ -36,12 +37,14 @@
 <line class="scale-x" x1="0" y1="5" x2="900" y2="5"/>
 <line stroke-width="1" class="scale-step" x1="0" y1="0" x2="0" y2="10"/>
 <text stroke-width="1" x="-6" y="26">0</text>
-<line stroke-width="1" class="scale-step" x1="226.13065326633" y1="0" x2="226.13065326633" y2="10"/>
-<text stroke-width="1" x="220.13065326633" y="26">50</text>
-<line stroke-width="1" class="scale-step" x1="452.26130653266" y1="0" x2="452.26130653266" y2="10"/>
-<text stroke-width="1" x="446.26130653266" y="26">100</text>
-<line stroke-width="1" class="scale-step" x1="678.391959799" y1="0" x2="678.391959799" y2="10"/>
-<text stroke-width="1" x="672.391959799" y="26">150</text>
+<line stroke-width="1" class="scale-step" x1="182.18623481781" y1="0" x2="182.18623481781" y2="10"/>
+<text stroke-width="1" x="176.18623481781" y="26">50</text>
+<line stroke-width="1" class="scale-step" x1="364.37246963563" y1="0" x2="364.37246963563" y2="10"/>
+<text stroke-width="1" x="358.37246963563" y="26">100</text>
+<line stroke-width="1" class="scale-step" x1="546.55870445344" y1="0" x2="546.55870445344" y2="10"/>
+<text stroke-width="1" x="540.55870445344" y="26">150</text>
+<line stroke-width="1" class="scale-step" x1="728.74493927126" y1="0" x2="728.74493927126" y2="10"/>
+<text stroke-width="1" x="722.74493927126" y="26">200</text>
 </g>
 </svg>
 </svg>

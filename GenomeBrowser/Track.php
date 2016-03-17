@@ -8,12 +8,18 @@ use GenomeBrowser\Glyph\ScaleGlyph as ScaleGlyph;
 
 class Track extends Container {
   private $browser;
+  private $enabled;
   private $features;
 
   function __construct($browser) {
     parent::__construct('glyph');
     $this->browser = $browser;
+    $this->enabled = true;
     $this->features = array();
+  }
+
+  function disable($bool=true) {
+    $this->enabled = !$bool;
   }
 
   function setPadding($padding) {
@@ -36,6 +42,11 @@ class Track extends Container {
 
   function getSize() {
     return $this->browser->getSize();
+  }
+
+  function getRenderSize() {
+    if (!$this->enabled) return 0;
+    return parent::getRenderSize();
   }
 
   function getGenomeBrowser() {
@@ -83,6 +94,11 @@ class Track extends Container {
     $geneModel = new GeneModelGlyph($this, $start, $end, $name);
     $this->addFeature($geneModel);
     return $geneModel;
+  }
+
+  function render() {
+    if (!$this->enabled) return "";
+    return parent::render();
   }
 
   protected function getCollection() {

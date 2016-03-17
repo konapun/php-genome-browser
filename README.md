@@ -1,6 +1,8 @@
 # PHP Genome Browser
 An implementation of a genome browser in pure PHP which renders as SVG.
 
+![browser example](test/glyphs.svg)
+
 ## Usage
 ```php
 

@@ -14,7 +14,7 @@ class GeneModelGlyph extends Glyph {
     $this->transcripts = array();
   }
 
-  function setName($name) {
+  function setLabel($name) {
     $this->name = $name;
   }
 
