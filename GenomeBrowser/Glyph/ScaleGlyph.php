@@ -29,9 +29,9 @@ class ScaleGlyph extends Glyph {
     $height = $this->stepHeight;
     if ($this->labelSteps) {
       if ($this->drawsVertical()) { // need to account for length of the longest label
-        list($start, $end) = $this->getCoordinates();
+        list($start, $end) = $this->getGenomeBrowser()->getCoordinates(); // need global coords since this sets them to (-1 to -1) since it doesn't know them ahead of time
 
-        $nchars = strlen($end);
+        $nchars = strlen($end) + 1; // 1 extra for label
         $height += $this->padding + ($this->textHeight * $nchars);
       }
       else {
@@ -109,7 +109,6 @@ class ScaleGlyph extends Glyph {
    * Converts a large number to human readable form
    */
   private function coordToHumanReadable($coord) {
-    return $coord;
     $units = array( // must be sorted from high to low
       'tera' => array(
         'factor' => 1000000000000,
