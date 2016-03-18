@@ -58,8 +58,6 @@ class Track extends Container {
   }
 
   function addFeature($feature) {
-    $start = null;
-    $end = null;
     if (func_num_args() > 1) { // Adding a feature based on type by naming convention rather than an instance of GenomeBrowser\Glyph\Glyph
       $args = array_slice(func_get_args(), 1); // remove $feature from args since we already have it
       $className = 'GenomeBrowser\\Glyph\\'.$this->getGlyphName($feature);
