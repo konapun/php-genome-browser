@@ -57,11 +57,16 @@ class Track extends Container {
     return $this->browser->drawsVertical();
   }
 
-  function addFeature($feature, $start=null, $end=null) {
-    if (!is_null($start)) { // Adding a feature based on type by naming convention rather than an instance of GenomeBrowserGlyph
+  function addFeature($feature) {
+    $start = null;
+    $end = null;
+    if (func_num_args() > 1) { // Adding a feature based on type by naming convention rather than an instance of GenomeBrowser\Glyph\Glyph
+      $args = array_slice(func_get_args(), 1); // remove $feature from args since we already have it
       $className = 'GenomeBrowser\\Glyph\\'.$this->getGlyphName($feature);
       if (class_exists($className)) {
-        $feature = new $className($this, $start, $end);
+        array_unshift($args, $this); // all glyphs are instantiated with the track as the first argument
+        $reflection = new \ReflectionClass($className);
+        $feature = $reflection->newInstanceArgs($args);
       }
       else {
         throw new \InvalidArgumentException("Unable to locate glyph for feature type $feature (tried $className)");
