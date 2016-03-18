@@ -17,6 +17,7 @@ $exonTrack->addArrow(90, 50);
 $testTrack = $browser->addTrack();
 $testTrack->addFeature('arrow', 1, 100)->setColor('orange');
 
+//$browser->addTrack()->addFeature('sequence', 10, "ACTGACTGACTGACTGACTGACTG");
 $scale = $browser->addTrack()->addScale();
 $scale->labelSteps();
 $scale->setStepping(50);

@@ -1,10 +1,10 @@
 <?php
 namespace GenomeBrowser;
 
-use GenomeBrowser\Glyph\ArrowGlyph as ArrowGlyph;
-use GenomeBrowser\Glyph\GeneModelGlyph as GeneModelGlyph;
-use GenomeBrowser\Glyph\LineGlyph as LineGlyph;
-use GenomeBrowser\Glyph\ScaleGlyph as ScaleGlyph;
+use GenomeBrowser\Glyph\Arrow as ArrowGlyph;
+use GenomeBrowser\Glyph\GeneModel as GeneModelGlyph;
+use GenomeBrowser\Glyph\Line as LineGlyph;
+use GenomeBrowser\Glyph\Scale as ScaleGlyph;
 
 class Track extends Container {
   private $browser;
@@ -114,7 +114,7 @@ class Track extends Container {
    * "GenomeBrowser[type]Glyph"
    */
   private function getGlyphName($type) {
-    return ucfirst(join('', array_map(function($e) { return ucfirst($e); }, preg_split('/-|\s+/', strtolower($type))))) . 'Glyph';
+    return ucfirst(join('', array_map(function($e) { return ucfirst($e); }, preg_split('/-|\s+/', strtolower($type)))));
   }
 }
 ?>

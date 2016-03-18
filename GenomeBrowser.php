@@ -14,9 +14,9 @@ include_once($browserBase . 'Track.php');
 include_once($browserBase . 'Browser.php');
 
 include_once($glyphBase . 'Glyph.php');
-include_once($glyphBase . 'ArrowGlyph.php');
-include_once($glyphBase . 'GeneModelGlyph.php');
-include_once($glyphBase . 'LineGlyph.php');
-include_once($glyphBase . 'ScaleGlyph.php');
-include_once($glyphBase . 'SequenceGlyph.php');
+include_once($glyphBase . 'Arrow.php');
+include_once($glyphBase . 'GeneModel.php');
+include_once($glyphBase . 'Line.php');
+include_once($glyphBase . 'Scale.php');
+include_once($glyphBase . 'Sequence.php');
 ?>

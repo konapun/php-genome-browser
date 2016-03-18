@@ -1,7 +1,7 @@
 <?php
 namespace GenomeBrowser\Glyph;
 
-class ArrowGlyph extends Glyph {
+class Arrow extends Glyph {
   private $thickness;
   private $arrowSize;
   private $direction;
@@ -9,12 +9,12 @@ class ArrowGlyph extends Glyph {
   const RIGHT = 'right';
   const LEFT = 'left';
 
-  function __construct($track, $start, $end, $direction=ArrowGlyph::RIGHT) {
+  function __construct($track, $start, $end, $direction=Arrow::RIGHT) {
     if ($end < $start) {
       $tmp = $end;
       $end = $start;
       $start = $tmp;
-      $direction = ArrowGlyph::LEFT;
+      $direction = Arrow::LEFT;
     }
 
     parent::__construct($track, $start, $end);
@@ -33,8 +33,8 @@ class ArrowGlyph extends Glyph {
 
   function setDirection($direction) {
     switch ($direction) {
-      case ArrowGlyph::RIGHT:
-      case ArrowGlyph::LEFT:
+      case Arrow::RIGHT:
+      case Arrow::LEFT:
         $this->direction = $direction;
         break;
       default:

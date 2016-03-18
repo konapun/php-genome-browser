@@ -1,7 +1,7 @@
 <?php
 namespace GenomeBrowser\Glyph;
 
-class ScaleGlyph extends Glyph {
+class Scale extends Glyph {
   private $stepping;
   private $labelSteps;
   private $stepHeight;

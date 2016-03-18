@@ -1,7 +1,7 @@
 <?php
 namespace GenomeBrowser\Glyph;
 
-class LineGlyph extends Glyph {
+class Line extends Glyph {
   private $thickness;
 
   function __construct($track, $start, $end) {

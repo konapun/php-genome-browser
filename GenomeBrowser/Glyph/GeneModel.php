@@ -1,7 +1,7 @@
 <?php
 namespace GenomeBrowser\Glyph;
 
-class GeneModelGlyph extends Glyph {
+class GeneModel extends Glyph {
   private $name;
   private $transcriptHeight;
   private $transcripts;
