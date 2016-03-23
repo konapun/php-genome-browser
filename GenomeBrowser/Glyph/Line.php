@@ -18,9 +18,9 @@ class Line extends Glyph {
 
     $trackCenter = $this->getSize() / 2;
     $strokeWidth = $this->getSize();
-    list($start, $end) = $this->getCoordinates();
-    $start = $this->coordToPixel($start);
-    $end = $this->coordToPixel($end);
+    list($coordStart, $coordEnd) = $this->getCoordinates();
+    $start = $this->coordToPixel($coordStart);
+    $end = $this->coordToPixel($coordEnd);
     $x1 = $start;
     $y1 = $trackCenter;
     $x2 = $end;
@@ -32,7 +32,7 @@ class Line extends Glyph {
       $y2 = $end;
     }
 
-    return '<line class="line-glyph" stroke-width="'.$strokeWidth.'" stroke="'.$this->getColor().'" x1="'.$x1.'" y1="'.$y1.'" x2="'.$x2.'" y2="'.$y2.'"/>';
+    return '<line class="line-glyph" stroke-width="'.$strokeWidth.'" stroke="'.$this->getColor().'" x1="'.$x1.'" y1="'.$y1.'" x2="'.$x2.'" y2="'.$y2.'" data-start="'.$coordStart.'" data-end="'.$coordEnd.'"/>';
   }
 }
 ?>

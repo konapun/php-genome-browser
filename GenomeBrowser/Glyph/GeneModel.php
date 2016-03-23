@@ -62,7 +62,7 @@ class GeneModel extends Glyph {
       $y1 = $geneStart;
       $y2 = $geneEnd;
     }
-    array_push($geneModel, '<line x1="'.$x1.'" y1="'.$y1.'" x2="'.$x2.'" y2="'.$y2.'"/>');
+    array_push($geneModel, '<line x1="'.$x1.'" y1="'.$y1.'" x2="'.$x2.'" y2="'.$y2.'" data-start="'.$start.'" data-end="'.$end.'"/>');
 
     // draw the transcripts
     foreach ($this->transcripts as $transcript) {
@@ -82,7 +82,7 @@ class GeneModel extends Glyph {
         $height = $transcriptWidth;
       }
 
-      array_push($geneModel, '<rect class="transcript" x="'.$x.'" y="'.$y.'" width="'.$width.'" height="'.$height.'"/>');
+      array_push($geneModel, '<rect class="transcript" x="'.$x.'" y="'.$y.'" width="'.$width.'" height="'.$height.'" data-start="'.$start.'" data-end="'.$end.'"/>');
       if ($name) {
         $style = "";
         $transcriptMiddleY = $y + ($height / 2) + ($fontSize / 2);

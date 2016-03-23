@@ -48,9 +48,9 @@ class Arrow extends Glyph {
     $strokeWidth = $this->getRenderSize();
     $trackCenter = $strokeWidth / 2;
     $arrowSize = $this->arrowSize;
-    list($start, $end) = $this->getCoordinates();
-    $start = $this->coordToPixel($start);
-    $end = $this->coordToPixel($end);
+    list($startCoord, $endCoord) = $this->getCoordinates();
+    $start = $this->coordToPixel($startCoord);
+    $end = $this->coordToPixel($endCoord);
 
     $x1 = $start;
     $y1 = $strokeWidth/2;
@@ -87,7 +87,7 @@ class Arrow extends Glyph {
       }
     }
 
-    $arrow = array('<g class="arrow-glyph" stroke="'.$this->getColor().'" fill="'.$this->getColor().'" data-direction="'.$this->direction.'">');
+    $arrow = array('<g class="arrow-glyph" stroke="'.$this->getColor().'" fill="'.$this->getColor().'" data-direction="'.$this->direction.'" data-start="'.$startCoord.'" data-end="'.$endCoord.'">');
     array_push($arrow, '<line stroke-width="'.$strokeWidth.'" x1="'.$x1.'" y1="'.$y1.'" x2="'.$x2.'" y2="'.$y2.'"/>');
     array_push($arrow, '<polygon points="'.$arrowHead.'"/>');
     array_push($arrow, '</g>');
