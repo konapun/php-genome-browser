@@ -62,7 +62,9 @@ class Browser extends Container {
   }
 
   function render() {
-    $svg = array('<svg xmlns="http://www.w3.org/2000/svg" class="genome-browser" width="'.$this->getWidth().'" height="'.$this->getHeight().'" version="1.1">');
+    $width = $this->getWidth();
+    $height = $this->getHeight();
+    $svg = array('<svg xmlns="http://www.w3.org/2000/svg" class="genome-browser" width="'.$width.'" height="'.$height.'" viewBox="0 0 '.$width.' '.$height.'" version="1.1">');
     array_push($svg, parent::render());
     array_push($svg, '</svg>');
 
