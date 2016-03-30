@@ -16,7 +16,9 @@ include_once($browserBase . 'Browser.php');
 include_once($glyphBase . 'Glyph.php');
 include_once($glyphBase . 'Arrow.php');
 include_once($glyphBase . 'GeneModel.php');
+include_once($glyphBase . 'Label.php');
 include_once($glyphBase . 'Line.php');
+include_once($glyphBase . 'Padding.php');
 include_once($glyphBase . 'Scale.php');
 include_once($glyphBase . 'Sequence.php');
 ?>
