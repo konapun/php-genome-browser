@@ -4,14 +4,24 @@ namespace GenomeBrowser\Glyph;
 class GeneModel extends Glyph {
   private $name;
   private $transcriptHeight;
+  private $direction;
   private $transcripts;
+
+  const RIGHT = 'right';
+  const LEFT = 'left';
 
   function __construct($track, $start, $end, $name="") {
     parent::__construct($track, $start, $end);
+
     $this->setColor("blue");
     $this->name = $name;
     $this->transcriptHeight = 32;
+    $this->direction = ($start < $end) ? self::RIGHT : self::LEFT;
     $this->transcripts = array();
+  }
+
+  function setDirection($direction) {
+    $this->direction = $direction;
   }
 
   function setLabel($name) {
@@ -42,6 +52,7 @@ class GeneModel extends Glyph {
     $drawVertical = $this->drawsVertical();
 
     $fontSize = $this->getFontSize();
+    $arrowSize = 10;
     $color = $this->getColor();
     $geneModel = array('<g class="gene-model" font-family="Verdana" font-size="'.$fontSize.'" stroke="'.$color.'" fill="'.$color.'" stroke-width="2">');
 
@@ -65,7 +76,18 @@ class GeneModel extends Glyph {
     array_push($geneModel, '<line x1="'.$x1.'" y1="'.$y1.'" x2="'.$x2.'" y2="'.$y2.'" data-start="'.$start.'" data-end="'.$end.'"/>');
 
     // draw the transcripts
+    $index = 0;
     foreach ($this->transcripts as $transcript) {
+      $first = false;
+      $last = false;
+      if ($index == 0) { // directionalities are applied to the first or last transcript
+        $first = true;
+        $last = true;
+      }
+      //elseif ($index == count($this->transcripts)-1) { // meh, having directions at the start is probably better
+      //  $last = true;
+      //}
+
       list($start, $end, $name) = $transcript;
       $transcriptStart = $this->coordToPixel($start);
       $transcriptEnd = $this->coordToPixel($end);
@@ -82,7 +104,63 @@ class GeneModel extends Glyph {
         $height = $transcriptWidth;
       }
 
-      array_push($geneModel, '<rect class="transcript" x="'.$x.'" y="'.$y.'" width="'.$width.'" height="'.$height.'" data-start="'.$start.'" data-end="'.$end.'"/>');
+      if ($first && $this->direction == self::RIGHT) { // draw at the end pointing right
+        $arrowHead = "";
+        if ($drawVertical) {
+          $height = $height - $arrowSize;
+          $arrowStart = $y + $height;
+          $arrowEnd = $arrowStart + $arrowSize;
+          $arrowTop = $x;
+          $arrowBottom = $x + $width;
+          $arrowMiddle = ($arrowBottom - $arrowTop) / 2;
+          $arrowHead = "$arrowTop,$arrowStart $arrowBottom,$arrowStart $arrowMiddle,$arrowEnd";
+        }
+        else {
+          $width = $width - $arrowSize;
+          $arrowStart = $x + $width;
+          $arrowEnd = $arrowStart + $arrowSize;
+          $arrowTop = $y;
+          $arrowBottom = $y + $height;
+          $arrowMiddle = ($arrowBottom - $arrowTop) / 2;
+          $arrowHead = "$arrowStart,$arrowTop $arrowStart,$arrowBottom $arrowEnd,$arrowMiddle"; // top, bottom, point
+        }
+
+        array_push($geneModel, '<g class="transcript" data-start="'.$start.'" data-end="'.$end.'">');
+        array_push($geneModel, '<rect x="'.$x.'" y="'.$y.'" width="'.$width.'" height="'.$height.'"/>');
+        array_push($geneModel, '<polygon points="'.$arrowHead.'"/>');
+        array_push($geneModel, '</g>');
+      }
+      elseif ($last && $this->direction == self::LEFT) {
+        $arrowHead = "";
+        if ($drawVertical) {
+          $height = $height - $arrowSize;
+          $arrowStart = $y;
+          $arrowEnd = $y + $arrowSize;
+          $arrowTop = $x;
+          $arrowBottom = $x + $width;
+          $arrowMiddle = ($arrowBottom - $arrowTop) / 2;
+          $arrowHead = "$arrowTop,$arrowEnd $arrowBottom,$arrowEnd $arrowMiddle,$arrowStart";
+          $y = $arrowEnd;
+        }
+        else {
+          $width = $width - $arrowSize;
+          $arrowStart = $x;
+          $arrowEnd = $x + $arrowSize;
+          $arrowTop = $y;
+          $arrowBottom = $y + $height;
+          $arrowMiddle = ($arrowBottom - $arrowTop) / 2;
+          $arrowHead = "$arrowEnd,$arrowTop $arrowEnd,$arrowBottom $arrowStart,$arrowMiddle"; // top, bottom, point
+          $x = $arrowEnd;
+        }
+
+        array_push($geneModel, '<g class="transcript" data-start="'.$start.'" data-end="'.$end.'">');
+        array_push($geneModel, '<rect x="'.$x.'" y="'.$y.'" width="'.$width.'" height="'.$height.'"/>');
+        array_push($geneModel, '<polygon points="'.$arrowHead.'"/>');
+        array_push($geneModel, '</g>');
+      }
+      else {
+        array_push($geneModel, '<rect class="transcript" x="'.$x.'" y="'.$y.'" width="'.$width.'" height="'.$height.'" data-start="'.$start.'" data-end="'.$end.'"/>');
+      }
       if ($name) {
         $style = "";
         $transcriptMiddleY = $y + ($height / 2) + ($fontSize / 2);
@@ -94,6 +172,8 @@ class GeneModel extends Glyph {
         }
         array_push($geneModel, '<text style="'.$style.'" stroke="none" fill="white" class="transcript-name" x="'.$transcriptMiddleX.'" y="'.$transcriptMiddleY.'">'.$name.'</text>');
       }
+
+      $index++;
     }
 
     // Draw the name of the gene model if there is one

@@ -1,204 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="genome-browser" width="900" height="155" version="1.1">
-<svg x="0" y="0"  width="900" height="37" class="track">
-<svg x="0" y="0"  width="900" height="32" class="glyph">
+<svg xmlns="http://www.w3.org/2000/svg" class="genome-browser" width="211" height="900" viewBox="0 0 211 900" version="1.1">
+<svg x="0" y="0"  width="74" height="900" class="track">
+<svg x="0" y="0"  width="32" height="900" class="glyph">
 <g class="gene-model" font-family="Verdana" font-size="16" stroke="blue" fill="blue" stroke-width="2">
-<line x1="0" y1="16" x2="680.71065989848" y2="16"/>
-<rect class="transcript" x="86.802030456853" y="0" width="45.685279187817" height="32"/>
-<rect class="transcript" x="223.8578680203" y="0" width="182.74111675127" height="32"/>
-<text style="" stroke="none" fill="black" class="gene-model-name" x="680.71065989848" y="16">gene-A</text>
+<line x1="16" y1="0" x2="16" y2="680.71065989848" data-start="1" data-end="150"/>
+<g class="transcript" data-start="20" data-end="30">
+<rect x="0" y="86.802030456853" width="32" height="35.685279187817"/>
+<polygon points="0,122.48730964467 32,122.48730964467 16,132.48730964467"/>
+</g>
+<rect class="transcript" x="0" y="223.8578680203" width="32" height="182.74111675127" data-start="50" data-end="90"/>
+<text style="writing-mode: tb;" stroke="none" fill="black" class="gene-model-name" x="16" y="680.71065989848">gene-A</text>
+</g>
+</svg>
+<svg x="37" y="0"  width="32" height="900" class="glyph">
+<g class="gene-model" font-family="Verdana" font-size="16" stroke="blue" fill="blue" stroke-width="2">
+<line x1="16" y1="680.71065989848" x2="16" y2="0" data-start="150" data-end="1"/>
+<g class="transcript" data-start="20" data-end="30">
+<rect x="0" y="96.802030456853" width="32" height="35.685279187817"/>
+<polygon points="0,96.802030456853 32,96.802030456853 16,86.802030456853"/>
+</g>
+<rect class="transcript" x="0" y="223.8578680203" width="32" height="182.74111675127" data-start="50" data-end="90"/>
+<text style="writing-mode: tb;" stroke="none" fill="black" class="gene-model-name" x="16" y="0">gene-B</text>
 </g>
 </svg>
 </svg>
-<svg x="0" y="42"  width="900" height="30" class="track">
-<svg x="0" y="0"  width="900" height="10" class="glyph">
-<g class="arrow-glyph" stroke="black" fill="black" data-direction="right">
-<line stroke-width="10" x1="86.802030456853" y1="5" x2="122.48730964467" y2="5"/>
-<polygon points="122.48730964467,10 132.48730964467,5 122.48730964467,0"/>
+<svg x="79" y="0"  width="0" height="900" class="track">
+
+</svg>
+<svg x="84" y="0"  width="30" height="900" class="track">
+<svg x="0" y="0"  width="10" height="900" class="glyph">
+<g class="arrow-glyph" stroke="black" fill="black" data-direction="right" data-start="20" data-end="30">
+<line stroke-width="10" x1="5" y1="86.802030456853" x2="5" y2="122.48730964467"/>
+<polygon points="0,122.48730964467 10,122.48730964467 5,132.48730964467"/>
 </g>
 </svg>
-<svg x="0" y="15"  width="900" height="10" class="glyph">
-<g class="arrow-glyph" stroke="black" fill="black" data-direction="left">
-<line stroke-width="10" x1="233.8578680203" y1="5" x2="406.59898477157" y2="5"/>
-<polygon points="223.8578680203,5 233.8578680203,10 233.8578680203,0"/>
-</g>
-</svg>
-</svg>
-<svg x="0" y="77"  width="900" height="15" class="track">
-<svg x="0" y="0"  width="900" height="10" class="glyph">
-<g class="arrow-glyph" stroke="orange" fill="orange" data-direction="right">
-<line stroke-width="10" x1="0" y1="5" x2="442.28426395939" y2="5"/>
-<polygon points="442.28426395939,10 452.28426395939,5 442.28426395939,0"/>
+<svg x="15" y="0"  width="10" height="900" class="glyph">
+<g class="arrow-glyph" stroke="black" fill="black" data-direction="left" data-start="50" data-end="90">
+<line stroke-width="10" x1="5" y1="233.8578680203" x2="5" y2="406.59898477157"/>
+<polygon points="0,233.8578680203 10,233.8578680203 5,223.8578680203"/>
 </g>
 </svg>
 </svg>
-<svg x="0" y="97"  width="900" height="17" class="track">
-<svg x="0" y="0"  width="900" height="12" class="glyph">
-<g class="sequence">
-<rect x="0" y="0" width="6" height="12" fill=""/>
-<rect x="6" y="0" width="6" height="12" fill="blue"/>
-<rect x="12" y="0" width="6" height="12" fill="red"/>
-<rect x="18" y="0" width="6" height="12" fill="yellow"/>
-<rect x="24" y="0" width="6" height="12" fill="orange"/>
-<rect x="30" y="0" width="6" height="12" fill="blue"/>
-<rect x="36" y="0" width="6" height="12" fill="red"/>
-<rect x="42" y="0" width="6" height="12" fill="yellow"/>
-<rect x="48" y="0" width="6" height="12" fill="orange"/>
-<rect x="54" y="0" width="6" height="12" fill="blue"/>
-<rect x="60" y="0" width="6" height="12" fill="red"/>
-<rect x="66" y="0" width="6" height="12" fill="yellow"/>
-<rect x="72" y="0" width="6" height="12" fill="orange"/>
-<rect x="78" y="0" width="6" height="12" fill="blue"/>
-<rect x="84" y="0" width="6" height="12" fill="red"/>
-<rect x="90" y="0" width="6" height="12" fill="yellow"/>
-<rect x="96" y="0" width="6" height="12" fill="orange"/>
-<rect x="102" y="0" width="6" height="12" fill="blue"/>
-<rect x="108" y="0" width="6" height="12" fill="red"/>
-<rect x="114" y="0" width="6" height="12" fill="yellow"/>
-<rect x="120" y="0" width="6" height="12" fill="orange"/>
-<rect x="126" y="0" width="6" height="12" fill="blue"/>
-<rect x="132" y="0" width="6" height="12" fill="red"/>
-<rect x="138" y="0" width="6" height="12" fill="yellow"/>
-<rect x="144" y="0" width="6" height="12" fill="orange"/>
-<rect x="150" y="0" width="6" height="12" fill="blue"/>
-<rect x="156" y="0" width="6" height="12" fill="red"/>
-<rect x="162" y="0" width="6" height="12" fill="yellow"/>
-<rect x="168" y="0" width="6" height="12" fill="orange"/>
-<rect x="174" y="0" width="6" height="12" fill="blue"/>
-<rect x="180" y="0" width="6" height="12" fill="red"/>
-<rect x="186" y="0" width="6" height="12" fill="yellow"/>
-<rect x="192" y="0" width="6" height="12" fill="orange"/>
-<rect x="198" y="0" width="6" height="12" fill="blue"/>
-<rect x="204" y="0" width="6" height="12" fill="red"/>
-<rect x="210" y="0" width="6" height="12" fill="yellow"/>
-<rect x="216" y="0" width="6" height="12" fill="orange"/>
-<rect x="222" y="0" width="6" height="12" fill="blue"/>
-<rect x="228" y="0" width="6" height="12" fill="red"/>
-<rect x="234" y="0" width="6" height="12" fill="yellow"/>
-<rect x="240" y="0" width="6" height="12" fill="orange"/>
-<rect x="246" y="0" width="6" height="12" fill="blue"/>
-<rect x="252" y="0" width="6" height="12" fill="red"/>
-<rect x="258" y="0" width="6" height="12" fill="yellow"/>
-<rect x="264" y="0" width="6" height="12" fill="orange"/>
-<rect x="270" y="0" width="6" height="12" fill="blue"/>
-<rect x="276" y="0" width="6" height="12" fill="red"/>
-<rect x="282" y="0" width="6" height="12" fill="yellow"/>
-<rect x="288" y="0" width="6" height="12" fill="orange"/>
-<rect x="294" y="0" width="6" height="12" fill="blue"/>
-<rect x="300" y="0" width="6" height="12" fill="red"/>
-<rect x="306" y="0" width="6" height="12" fill="yellow"/>
-<rect x="312" y="0" width="6" height="12" fill="orange"/>
-<rect x="318" y="0" width="6" height="12" fill="blue"/>
-<rect x="324" y="0" width="6" height="12" fill="red"/>
-<rect x="330" y="0" width="6" height="12" fill="yellow"/>
-<rect x="336" y="0" width="6" height="12" fill="orange"/>
-<rect x="342" y="0" width="6" height="12" fill="blue"/>
-<rect x="348" y="0" width="6" height="12" fill="red"/>
-<rect x="354" y="0" width="6" height="12" fill="yellow"/>
-<rect x="360" y="0" width="6" height="12" fill="orange"/>
-<rect x="366" y="0" width="6" height="12" fill="blue"/>
-<rect x="372" y="0" width="6" height="12" fill="red"/>
-<rect x="378" y="0" width="6" height="12" fill="yellow"/>
-<rect x="384" y="0" width="6" height="12" fill="orange"/>
-<rect x="390" y="0" width="6" height="12" fill="blue"/>
-<rect x="396" y="0" width="6" height="12" fill="red"/>
-<rect x="402" y="0" width="6" height="12" fill="yellow"/>
-<rect x="408" y="0" width="6" height="12" fill="orange"/>
-<rect x="414" y="0" width="6" height="12" fill="blue"/>
-<rect x="420" y="0" width="6" height="12" fill="red"/>
-<rect x="426" y="0" width="6" height="12" fill="yellow"/>
-<rect x="432" y="0" width="6" height="12" fill="orange"/>
-<rect x="438" y="0" width="6" height="12" fill="blue"/>
-<rect x="444" y="0" width="6" height="12" fill="red"/>
-<rect x="450" y="0" width="6" height="12" fill="yellow"/>
-<rect x="456" y="0" width="6" height="12" fill="orange"/>
-<rect x="462" y="0" width="6" height="12" fill="blue"/>
-<rect x="468" y="0" width="6" height="12" fill="red"/>
-<rect x="474" y="0" width="6" height="12" fill="yellow"/>
-<rect x="480" y="0" width="6" height="12" fill="orange"/>
-<rect x="486" y="0" width="6" height="12" fill="blue"/>
-<rect x="492" y="0" width="6" height="12" fill="red"/>
-<rect x="498" y="0" width="6" height="12" fill="yellow"/>
-<rect x="504" y="0" width="6" height="12" fill="orange"/>
-<rect x="510" y="0" width="6" height="12" fill="blue"/>
-<rect x="516" y="0" width="6" height="12" fill="red"/>
-<rect x="522" y="0" width="6" height="12" fill="yellow"/>
-<rect x="528" y="0" width="6" height="12" fill="orange"/>
-<rect x="534" y="0" width="6" height="12" fill="blue"/>
-<rect x="540" y="0" width="6" height="12" fill="red"/>
-<rect x="546" y="0" width="6" height="12" fill="yellow"/>
-<rect x="552" y="0" width="6" height="12" fill="orange"/>
-<rect x="558" y="0" width="6" height="12" fill="blue"/>
-<rect x="564" y="0" width="6" height="12" fill="red"/>
-<rect x="570" y="0" width="6" height="12" fill="yellow"/>
-<rect x="576" y="0" width="6" height="12" fill="orange"/>
-<rect x="582" y="0" width="6" height="12" fill="blue"/>
-<rect x="588" y="0" width="6" height="12" fill="red"/>
-<rect x="594" y="0" width="6" height="12" fill="yellow"/>
-<rect x="600" y="0" width="6" height="12" fill="orange"/>
-<rect x="606" y="0" width="6" height="12" fill="blue"/>
-<rect x="612" y="0" width="6" height="12" fill="red"/>
-<rect x="618" y="0" width="6" height="12" fill="yellow"/>
-<rect x="624" y="0" width="6" height="12" fill="orange"/>
-<rect x="630" y="0" width="6" height="12" fill="blue"/>
-<rect x="636" y="0" width="6" height="12" fill="red"/>
-<rect x="642" y="0" width="6" height="12" fill="yellow"/>
-<rect x="648" y="0" width="6" height="12" fill="orange"/>
-<rect x="654" y="0" width="6" height="12" fill="blue"/>
-<rect x="660" y="0" width="6" height="12" fill="red"/>
-<rect x="666" y="0" width="6" height="12" fill="yellow"/>
-<rect x="672" y="0" width="6" height="12" fill="orange"/>
-<rect x="678" y="0" width="6" height="12" fill="blue"/>
-<rect x="684" y="0" width="6" height="12" fill="red"/>
-<rect x="690" y="0" width="6" height="12" fill="yellow"/>
-<rect x="696" y="0" width="6" height="12" fill="orange"/>
-<rect x="702" y="0" width="6" height="12" fill="blue"/>
-<rect x="708" y="0" width="6" height="12" fill="red"/>
-<rect x="714" y="0" width="6" height="12" fill="yellow"/>
-<rect x="720" y="0" width="6" height="12" fill="orange"/>
-<rect x="726" y="0" width="6" height="12" fill="blue"/>
-<rect x="732" y="0" width="6" height="12" fill="red"/>
-<rect x="738" y="0" width="6" height="12" fill="yellow"/>
-<rect x="744" y="0" width="6" height="12" fill="orange"/>
-<rect x="750" y="0" width="6" height="12" fill="blue"/>
-<rect x="756" y="0" width="6" height="12" fill="red"/>
-<rect x="762" y="0" width="6" height="12" fill="yellow"/>
-<rect x="768" y="0" width="6" height="12" fill="orange"/>
-<rect x="774" y="0" width="6" height="12" fill="blue"/>
-<rect x="780" y="0" width="6" height="12" fill="red"/>
-<rect x="786" y="0" width="6" height="12" fill="yellow"/>
-<rect x="792" y="0" width="6" height="12" fill="orange"/>
-<rect x="798" y="0" width="6" height="12" fill="blue"/>
-<rect x="804" y="0" width="6" height="12" fill="red"/>
-<rect x="810" y="0" width="6" height="12" fill="yellow"/>
-<rect x="816" y="0" width="6" height="12" fill="orange"/>
-<rect x="822" y="0" width="6" height="12" fill="blue"/>
-<rect x="828" y="0" width="6" height="12" fill="red"/>
-<rect x="834" y="0" width="6" height="12" fill="yellow"/>
-<rect x="840" y="0" width="6" height="12" fill="orange"/>
-<rect x="846" y="0" width="6" height="12" fill="blue"/>
-<rect x="852" y="0" width="6" height="12" fill="red"/>
-<rect x="858" y="0" width="6" height="12" fill="yellow"/>
-<rect x="864" y="0" width="6" height="12" fill="orange"/>
-<rect x="870" y="0" width="6" height="12" fill="blue"/>
-<rect x="876" y="0" width="6" height="12" fill="blue"/>
-<rect x="882" y="0" width="6" height="12" fill="blue"/>
-<rect x="888" y="0" width="6" height="12" fill="blue"/>
-<rect x="894" y="0" width="6" height="12" fill="blue"/>
+<svg x="119" y="0"  width="15" height="900" class="track">
+<svg x="0" y="0"  width="10" height="900" class="glyph">
+<g class="arrow-glyph" stroke="orange" fill="orange" data-direction="right" data-start="1" data-end="100">
+<line stroke-width="10" x1="5" y1="0" x2="5" y2="442.28426395939"/>
+<polygon points="0,442.28426395939 10,442.28426395939 5,452.28426395939"/>
 </g>
 </svg>
 </svg>
-<svg x="0" y="119"  width="900" height="31" class="track">
-<svg x="0" y="0"  width="900" height="26" class="glyph">
+<svg x="139" y="0"  width="67" height="900" class="track">
+<svg x="0" y="0"  width="62" height="900" class="glyph">
 <g class="scale" font-family="Verdana" font-size="12" stroke="black" line-color="black" stroke-width="2">
-<line class="scale-x" x1="0" y1="5" x2="900" y2="5"/>
-<line stroke-width="1" class="scale-step" x1="0" y1="0" x2="0" y2="10"/>
-<text stroke-width="1" x="-6" y="26">0</text>
-<line stroke-width="1" class="scale-step" x1="228.42639593909" y1="0" x2="228.42639593909" y2="10"/>
-<text stroke-width="1" x="222.42639593909" y="26">50</text>
-<line stroke-width="1" class="scale-step" x1="456.85279187817" y1="0" x2="456.85279187817" y2="10"/>
-<text stroke-width="1" x="450.85279187817" y="26">100</text>
-<line stroke-width="1" class="scale-step" x1="685.27918781726" y1="0" x2="685.27918781726" y2="10"/>
-<text stroke-width="1" x="679.27918781726" y="26">150</text>
+<line class="scale-x" x1="5" y1="0" x2="5" y2="900"/>
+<line stroke-width="1" class="scale-step" x1="0" y1="0" x2="10" y2="0"/>
+<text stroke-width="1" x="14" y="6">0</text>
+<line stroke-width="1" class="scale-step" x1="0" y1="228.42639593909" x2="10" y2="228.42639593909"/>
+<text stroke-width="1" x="14" y="234.42639593909">50</text>
+<line stroke-width="1" class="scale-step" x1="0" y1="456.85279187817" x2="10" y2="456.85279187817"/>
+<text stroke-width="1" x="14" y="462.85279187817">100</text>
+<line stroke-width="1" class="scale-step" x1="0" y1="685.27918781726" x2="10" y2="685.27918781726"/>
+<text stroke-width="1" x="14" y="691.27918781726">150</text>
 </g>
 </svg>
 </svg>
