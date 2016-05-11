@@ -89,9 +89,11 @@ class Scale extends Glyph {
 
         $xpos = $x1 - ($this->textHeight / 2);
         $ypos = $y2 + $this->padding + $this->textHeight;
+        if ($xpos < 0) $xpos = 0;
         if ($drawsVertical) {
           $ypos = $y1 + ($this->textHeight / 2);
           $xpos = $x2 + $this->padding;
+          if ($ypos < $this->textHeight) $ypos = $this->textHeight;
         }
 
         array_push($scale, '<text stroke-width="1" x="'.$xpos.'" y="'.$ypos.'">'.$label.'</text>');
